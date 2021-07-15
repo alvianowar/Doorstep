@@ -1,0 +1,67 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+
+\title{\textbf{Doorstep}}
+\author{MD. Tausiful Bari 1812085042 \\Alvi Anowar 1813403642 \\CSE, North South University}
+
+\date{10 July, 2021}
+
+\begin{document}
+
+\maketitle      %maketitle - used to display preamble
+
+\
+
+\section*{Introduction}
+Bangladesh is a very densely populated country. We have biomes that span from arid
+wastelands to lush forestry; and in every corner of these places there’s people in the heart of it. Humans live in unison in this trade focused society. Health; a primary necessity for humans. Sickness plagued humanity since the start of time and as we advanced, scholars developed Medicine. Now, back in the day, the hardest part about finding Medicine was finding a good alchemist to craft it. Now-a-days there’s so many medicine brands and so many different versions of one specific medicine that it’s hard to know what you’re taking or even if it’s the correct medicine. Introducing “Doorstep”; Our website that brings quality of life to people having to take regular meds. Below, we have a collective of information about our project.
+
+\section*{Objective}
+\begin{enumerate}
+    \item Ensure easy access to medicine at any time.
+    \item Digitally recording Prescriptions
+    \item Donations system to reduce the price for people who can’t afford.
+    \item Donations to contribute to expensive operations for those who need it.
+\end{enumerate}
+
+\section*{target Customers}
+\begin{itemize}
+    \item \textbf{Customers}: People actually buying the medicine.
+    \item \textbf{Shopkeeper}: Supplier of Medicine.
+    \item \textbf{doctors}: Create Profiles and show availability.
+\end{itemize}
+
+\section*{Value Proposition}
+This website will act like a Medicine Delivery system. It will have a database for the meds that
+we take with all the information we’d need.Donations will make way for poorer customers to
+have access to the medicine they need. Prescriptions can also be recorded digitally right from
+the app.
+\begin{enumerate}
+    \item Check Doctor’s time.
+    \item Detailed Info on Medicine.
+    \item Find Multiple brands for 1 drug.
+    \item Locations where the specific Drug is available.
+    \item Feedback. If any brand/Medicine is missing, users can let us know in the feedback page
+and we will add it asap.
+\end{enumerate}
+
+\section*{Tools and Resources}
+\begin{enumerate}
+    \item HTML
+    \item CSS
+    \item Javascript
+    \item MySQL
+    \item PHP
+    \item Web Server
+\end{enumerate}
+
+\section*{Challenges}
+\begin{itemize}
+    \item Cost. A huge database involving multiple brands and multiple pharmacies takes a lot of
+manpower to accomplish.
+    \item Marketing the product to multiple Doctors.
+    \item Mobile implementations for the Website.
+    \item Tracking of Donations through Online Banking Sources.
+\end{itemize}
+
+\end{document}
