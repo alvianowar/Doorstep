@@ -1,0 +1,31 @@
+.info{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 300px;
+    margin-top: 30px;
+    margin-left: 300px;
+    padding-left: 50px;
+    padding-top: 5px;
+    background-color: rgba(255, 191, 191, 0.7);
+    border-radius: 50px;
+}
+
+.col-1{
+    display: inline-block;
+    padding-left: 50px;
+}
+
+.col-1 ul li{
+   list-style-type: none;
+}
+
+.col-2{
+    display: inline-block;
+    padding-left: 450px;
+}
+
+.col-2 ul li{
+    list-style-type: none;
+}
+

@@ -1,0 +1,35 @@
+.row{
+    padding-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+    
+}
+
+.srchb{
+    padding-top: 20px;
+}
+
+.col{
+    list-style-type: none;
+    display: inline-block;
+    background-color: rgba(255, 253, 253, 0.7);
+    border-radius: 10px;
+    height: 200px;
+    width: 250px;
+    padding-top: 60px;
+    font-size:30px;
+}
+
+.loc{
+    display: inline-block;
+    margin-top: 10px;
+    background-color: rgba(171, 183, 183, 1);
+    width: 10vh;
+    height: 4.5vh;
+    border-radius: 5px;
+    margin-left: 5px;
+    list-style-type: none;
+    text-align: center;
+    padding-top: 0.5vh;
+}
