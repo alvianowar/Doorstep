@@ -1,0 +1,84 @@
+.navbar{
+    width: 500px;
+    background-color: rgba(243, 119, 24, 0.5);
+    margin-top: 10%;
+    color: #000000;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+    margin-left: 120px;
+}
+
+body{
+    background-image: url(/assets/img/signup.jpg);
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+}
+
+form{
+    margin-top: 10%;
+    padding-top: 10px;
+    margin:auto;
+    text-align: center;
+    font-size: 20px;
+    background-color: rgba(243, 119, 24, 0.5);
+    width: 500px;
+    height: 300px;
+    border-radius:  0px 0px 15px 15px;
+    margin-right: 900px;
+}
+
+
+.textbox{
+    line-height: 20px;
+    width: 260px; 
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 70px;
+}
+
+.email{
+    line-height: 20px;
+    width: 260px; 
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 116px;
+}
+
+.cnfpwd{
+    line-height: 20px;
+    width: 260px; 
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 05px;
+}
+
+.pwd{
+    line-height: 20px;
+    width: 260px; 
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 82px;
+}
+
+.phn{
+    line-height: 20px;
+    width: 260px; 
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+.addr{
+    line-height: 20px;
+    width: 260px; 
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 90px;
+}

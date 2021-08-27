@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    padding: 0;
+    padding-left: 0;
     box-sizing: border-box;
 }
 
@@ -58,4 +58,16 @@ p{
     font-size: 50px;
     line-height: 60px;
     margin: 25px 0;
+}
+
+.search{
+    margin-top: 10px;
+    background-color: rgba(171, 183, 183, 1);
+    width: 30vh;
+    height: 4.5vh;
+    border-radius: 50px;
+    margin-left: 1300px;
+    list-style-type: none;
+    text-align: center;
+    padding-top: 0.5vh;
 }
