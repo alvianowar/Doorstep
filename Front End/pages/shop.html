@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shop</title>
     <link rel="stylesheet" href="../assets/css/shop.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <header>
@@ -17,46 +18,78 @@
             <nav>
                 <ul>
                     <li><a href="Medicine.html">Medicine</a></li>
-                    <li><a href="Doctors.html">Doctor</a></li>
+                    <li><a href="doctors.html">Doctor</a></li>
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="regMED.html">Add Drug</a></li>
                     <li><a href="login.html">Account</a></li>
+                    <li><a href="consumer.html">Profile</a></li>
                 </ul>
-                <a href="cart.html"><img src="../assets/img/addToCart.png" height="20px" width="20px" alt=""></a>
+                <a href="cart.html"><img src="/assets/img/addToCart.png" height="20px" width="20px" alt=""></a>
             </nav>
         </div>
     </header>
     <main>
-        <div class="search">
-            <li>search</li>
+        <div class="srchb">
+            <div class="search">
+                <li>search</li>
+            </div>
         </div>
 
-        <div class="r">
-            <div class="c">
-                <li>Medicine</li>
+        <div class="row">
+            <div class="col">
+                <big>Over The Counter</big>
             </div>
-            <div class="c">
-                <li>Sanitary</li>
+            <div class="col">
+                <big>Sanitary</big>
             </div>
-            <div class="c">
-                <li>first aid kit</li>
+            <div class="col">
+                <big>First aid kit</big>
+            </div>
+            <div class="col">
+                <big>Femine</big>
+            </br>
+                <big>Products<big>
+            </div>
+            <div class="col">
+                <big>Request for foreign medicine</big>
             </div>
             </div>
         </div>
 
         <hr>
-        <div class="location">
-            <div class="city">
-                <li>city</li>
-            </div>
-            <div class="city">
-                <li>area</li>
-            </div>
-        </div>
-
+        
+        <select name="area" id="">
+            <option value="NULL">Area</option>
+            <option value="DHk">Dhaka</option>
+            <option value="ctg">Chittagong</option>
+            <option value="NK">NOakhali</option>
+        </select>
+        
+        <select name="city" id="">
+            <option value="NULL">City</option>
+            <option value="BR">Bashhundhara Residential</option>
+            <option value="Mohammadpur">Mohammadpur</option>
+            <option value="DhakaUddan">Dhaka Uddan</option>
+        </select>
+        
         <div class="medicine">
-            <a href="/Images/Napa-250.jpg" width = "30px" alt = "Napa-250"></a>
             <div class="line">
+                <img src="../assets/img/Napa-250.jpg" width = "100px" alt = "Napa-250">
+                <big>Napa</big><br>
+                <small>Paracetamol</small>
+            </div>
+            <div class="line">
+                <img src="../assets/img/Napa-250.jpg" width = "100px" alt = "Napa-250">
+                <big>Brand Name</big><br>
+                <small>Generic Name</small>
+            </div>
+            <div class="line">
+                <img src="../assets/img/Napa-250.jpg" width = "100px" alt = "Napa-250">
+                <big>Brand Name</big><br>
+                <small>Generic Name</small>
+            </div>
+            <div class="line">
+                <img src="../assets/img/Napa-250.jpg" width = "100px" alt = "Napa-250">
                 <big>Brand Name</big><br>
                 <small>Generic Name</small>
             </div>

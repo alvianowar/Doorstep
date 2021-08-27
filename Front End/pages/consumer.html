@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/cosumer.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>User Page</title>
+</head>
+<body style="background-image: url(/assets/img/user.jpg);">
+    <header>
+        <div class = "navbar">
+            <div>
+                <h1><a href="../index.html">DoorStep</a></h1>
+            </div>
+    
+            <nav>
+                <ul>
+                    <li><a href="Medicine.html">Medicine</a></li>
+                    <li><a href="doctors.html">Doctor</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="regMED.html">Add Drug</a></li>
+                    <li><a href="login.html">Account</a></li>
+                    <li><a href="consumer.html">Profile</a></li>
+                </ul>
+                <a href="cart.html"><img src="/assets/img/addToCart.png" height="20px" width="20px" alt=""></a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="main">
+                <button type = "button" class="toggle-btn" onclick="user()">User</button>
+                <button type = "button" class="toggle-btn" onclick="purchase()">Purchase History</button>
+                <button type = "button" class="toggle-btn" onclick="settings()">Settings</button>
+                <form id="user" class ="inputs">
+                    <label for="fname"> <b>First Name</b></label>
+                    <input type="text" name="fname" value = "Alvi" readonly>
+        
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname" value = "Anowar" readonly> <br>
+        
+                    <label for="email">Email</label> 
+                    <input type="text" name="email" value = "alvianowar@gmail.com" readonly><br>
+        
+                    <label for="phone">Phone Number</label>
+                    <input type="text" name="phone" value = "+880123456789" readonly><br>
+        
+                    <label for="addr">Addree</label>
+                    <input type="text" name="addr" value = "Country road take me home." readonly>
+        
+                </form>
+                
+                <form id="purchase" class ="inputs">
+                    <label for ="rowNumb">Nubmer of rows</label>
+                    <input type="number" name="rowNumb" value="10">
+        
+                    <table>
+                        <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        </tr>
+                        <tr>
+                            <td>Napa - 250mg</td>
+                            <td>10</td>
+                            <td>10 taka</td>
+                        </tr>
+                        <tr>
+                            <td>Napa - 250mg</td>
+                            <td>10</td>
+                            <td>10 taka</td>
+                        </tr>
+                        <tr>
+                            <td>Napa - 250mg</td>
+                            <td>10</td>
+                            <td>10 taka</td>
+                        </tr>
+                    </table>
+                </form>
+        
+                <form id="settings" class ="inputs">
+                    <label for="fname">First Name</label>
+                    <input type="text" name="fname" value = "" ><br>
+        
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname" value = "" > <br>
+        
+                    <label for="email">Email</label> 
+                    <input type="text" name="email" value = "alvianowar@gmail.com" readonly><br>
+        
+                    <label for="phone">Phone Number</label>
+                    <input type="text" name="phone" value = "" ><br>
+        
+                    <label for="addr">Addree</label>
+                    <input type="text" name="addr" value = "" ><br>
+
+                    <label for="pwd">Old Password</label>
+                    <input type="password" name="pwd" value = "" > <br>
+
+                    <label for="pwd">New Password</label>
+                    <input type="password" name="pwd" value = "" > <br>
+
+                    <label for="pwd">Confirm Password</label>
+                    <input type="password" name="pwd" value = "" > <br>
+
+                </form>
+        </div>
+        <script>
+            var x = document.getElementById("user");
+            var y = document.getElementById("purchase");
+            var z = document.getElementById("settings");
+
+            function user(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "850px";
+            }
+
+            function purchase(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "850px";
+            }
+            
+            function settings(){
+                x.style.left = "-500px";
+                y.style.left = "450px";
+                z.style.left = "50px";
+            }
+        </script>
+    </main>
+</body>
+</html>
