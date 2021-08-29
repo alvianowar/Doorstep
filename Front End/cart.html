@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/cart.css">
+    <title>Add to Cart</title>
+</head>
+<body>
+    <div class = "container">
+        <div class = "navbar">
+            <div>
+                <h1><a href="../index.html">DoorStep</a></h1>
+            </div>
+    
+            <nav>
+                <ul>
+                    <li><a href="Medicine.html">Medicine</a></li>
+                    <li><a href="doctors.html">Doctor</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="regMED.html">Add Drug</a></li>
+                    <li><a href="login.html">Account</a></li>
+                    <li><a href="consumer.html">Profile</a></li>
+                </ul>
+                <a href="cart.html"><img src="/assets/img/addToCart.png" height="20px" width="20px" alt=""></a>
+            </nav>
+        </div>
+
+        <div class = "cart-table">
+            <table>
+                <tr>
+                    <th>Medicine</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>SubTotal</th>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class = "med-info">
+                            <p> 
+                                <b>Napa</b><small> 500 mg</small><br>
+                                <a href="">Remove</a>
+                            </p>
+                        </div>
+                    </td>
+                    <td>0.80</td>
+                    <td><input type="number" value = "1"></td>
+                    <td>৳ 80</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <div class = "med-info">
+                            <p> 
+                                <b>Bicozin</b><small> 5 mg + 10 mg</small><br>
+                                <a href="">Remove</a>
+                            </p>
+                        </div>
+                    </td>
+                    <td>৳ 3.00</td>
+                    <td><input type="number" value = "3"></td>
+                    <td>৳ 270.00</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <div class = "med-info">
+                            <p> 
+                                <b>Doxicap</b><small> 100 mg</small><br>
+                                <a href="">Remove</a>
+                            </p>
+                        </div>
+                    </td>
+                    <td>৳ 2.20</td>
+                    <td><input type="number" value = "2"></td>
+                    <td>৳ 44.00</td>
+                </tr>
+            </table>
+
+            <div class = "total-cost">
+                <table>
+                    <tr>
+                        <td>SubTotal</td>
+                        <td>৳ 394.00</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Tax</td>
+                        <td>৳ 17.5</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Total</td>
+                        <td>৳ 411.50</td>
+                    </tr>
+    
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
