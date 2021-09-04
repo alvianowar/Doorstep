@@ -1,0 +1,203 @@
+create table address(
+	id int(8) primary key auto_increment,
+    suburb varchar(25) not null,
+    area varchar(25) not null,
+    city varchar(25) not null,
+    unique(suburb),
+    index(city, area),
+    created_at timestamp not null default current_timestamp(),
+    update_at timestamp not null default current_timestamp()
+);
+
+insert into address(id, suburb, area, city)
+values(1, "Bashundhora", "Baridhara", "Dhaka"),
+	  (2, "Noton Bazar", "Baridhara", "Dhaka"),
+      (5, "New Market", "Chawlkbazar", "Chittagong"),
+      (9, "Sunapur", "Maizdi", "Nowakhali");
+      
+
+create table shop(
+	id int(8) primary key auto_increment,
+    name varchar(30) not null,
+    phone char(11) not null,
+    address_id int(8) default null,
+    created_at timestamp not null default current_timestamp(),
+    update_at timestamp not null default current_timestamp(),
+    foreign key(address_id) 
+    references address(id)
+    on delete no action
+    on update cascade
+);
+
+insert into shop(id, name, phone, address_id)
+values(3, "Murir Teen Medical Stor", "01722222222", "2"),
+	  (4, "Kala kaowa Drug Shop", "01866666666", "1"),
+      (7, "Jibon Drug Shop", "01266666666", "2"),
+      (8, "Ali Drug Store", "01577777777", "5");
+      
+
+
+create table users(
+	id int(11) primary key auto_increment,
+    fname varchar(20) default null,
+    lname varchar(20) not null,
+    phone char(11) not null,
+    email varchar(25) not null,
+    pass varchar(50) not null,
+    donation decimal(8,2) default null,
+    address_id int(8) default null,
+    unique(email),
+    constraint user_info unique(fname, lname, phone),
+	created_at timestamp not null default current_timestamp(),
+    update_at timestamp not null default current_timestamp(),
+    foreign key(address_id) 
+    references address(id)
+    on delete no action
+    on update cascade
+);
+
+
+insert into users(id, fname, lname, phone, email, pass, donation, address_id)
+values(2, "Sakib", "Alamin", "01822268675", "sakib.alamin@gmail.com", "nstryjdcty", 100.21, 5),
+	  (5, "Afrose", "maisha", "01759348370", "afrosemaisha@yahoo.com", "ofvibj34nv", 21, 9);
+      
+
+
+drop table address;
+drop table shop;
+drop table users;
+drop table medicine;
+
+
+create table drug_info(
+	id int(10) primary key auto_increment,
+	brand varchar(25) not null,
+    generic varchar(50) not null,
+    type varchar(20) not null,
+    strength varchar(15) not null,
+    indication text not null,
+    dose text not null,
+    interaction text not null,
+    contraindication text not null,
+    effect text not null,
+    pregnancy text not null,
+    warning text not null,
+    overdose_effect text not null,
+    storage_condition text not null,
+    price decimal(8,2) not null
+);
+
+insert into drug_info(id, brand, generic, type, strength, indication, dose, interaction, contraindication, effect, pregnancy, warning, overdose_effect, storage_condition, price)
+values(1, "Napa", "Paracetamol", "Tablet", "500mg", "Paracetamol is indicated for fever, common cold and influenza, headache, toothache, earache, bodyache, myalgia, neuralgia, dysmenorrhoea, sprains, colic pain, back pain, post-operative pain, postpartum pain, inflammatory pain and post vaccination pain in children. It is also indicated for rheumatic & osteoarthritic pain and stiffness of joints.", "Tablet:
+Adult: 1-2 tablets every 4 to 6 hours up to a maximum of 4 gm (8 tablets) daily.
+Children (6-12 years): ½ to 1 tablet 3 to 4 times daily. For long term treatment it is wise not to exceed the dose beyond 2.6 gm/day.
+Extended Release Tablet:
+Adults & Children over 12 years: Two tablets, swallowed whole, every 6 to 8 hours (maximum of 6 tablets in any 24 hours).The tablet must not be crushed.
+Syrup/Suspension:
+Children under 3 months: 10 mg/kg body weight (reduce to 5 mg/kg if jaundiced) 3 to 4 times daily.
+3 months to below 1 year: ½ to 1 teaspoonful 3 to 4 times daily.
+1-5 years: 1 -2 teaspoonful 3 to 4 times daily.
+6-12 years: 2-A teaspoonful 3 to 4 times daily.
+Adults: 4-8 teaspoonful 3 to 4 times daily.
+Suppository:
+Children 3-12 months: 60-120 mg,4 times daily.
+Children 1-5 years: 125-250 mg 4 times daily.
+Children 6-12 years: 250-500 mg 4 times daily.
+Adults & children over 12 years: 0.5-1 gm 4 times daily.
+Paediatric Drop:
+Children Upto 3 months: 0.5 ml (40 mg)
+4 to 11 months: 1.0 ml (80 mg)
+7 to 2 years: 1.5 ml (120 mg). Do not exceed more than 5 dose daily for a maximum of 5 days.
+Paracetamol tablet with actizorb technology: It dissolves up to five times faster than standard Paracetamol tablets. It is a fast acting and safe analgesic with marked antipyretic property. It is specially suitable for patients who, for any reason, can not tolerate aspirin or other analgesics.
+Adults and children (aged 12 years and over): Take 1 to 2 Tablets every four to six hours as needed. Do not take more than 8 caplets in 24 hours.
+Children (7 to 11 years): Take ½-1 Tablet every four to six hours as needed. Do not take more than 4 caplets in 24 hours. Not recommended in children under 7 years.", "Patients who have taken barbiturates, tricyclic antidepressants and alcohol may show diminished ability to metabolise large doses of Paracetamol. Alcohol can increase the hepatotoxicity of Paracetamol overdosage. Chronic ingestion of anticonvulsants or oral steroid contraceptives induce liver enzymes and may prevent attainment of therapeutic Paracetamol levels by increasing first-pass metabolism or clearance.", "It is contraindicated in known hypersensitivity to Paracetamol.", "Side effects of paracetamol are usually mild, though haematological reactions including thrombocytopenia, leucopenia, pancytopenia, neutropenia, and agranulocytosis have been reported. Pancreatitis, skin rashes, and other allergic reactions occur occasionally.", "Pregnancy category B according to USFDA. This drug should be used during pregnancy only if clearly needed", "Paracetamol should be given with caution to patients with impaired kidney or liver function. Paracetamol should be given with care to patients taking other drugs that affect the liver.", "Symptoms of Paracetamol overdose in the first 24 hours are pallor, nausea, vomiting, anorexia and abdominal pain. Liver damage may become apparent 12-48 hours after ingestion. Abnormalities of glucose metabolism and metabolic acidosis may occur.", "Keep in a dry place away from light and heat. Keep out of the reach of children.", 0.80);
+
+
+create table medicine(
+	id int(11) primary key auto_increment,
+	drug_id int(10) default null,
+    shop_id int(8) default null,
+    index(shop_id),
+	created_at timestamp not null default current_timestamp(),
+    update_at timestamp not null default current_timestamp(),
+    foreign key(drug_id) 
+    references drug_info(id)
+    on delete set null
+    on update cascade,
+    foreign key(shop_id) 
+    references shop(id)
+    on delete cascade
+    on update cascade
+);
+
+
+create table cart(
+	id int(10) primary key,
+    user_id int(11) not null,
+    medicine_id int(11) not null,
+    index(user_id),
+    created_at timestamp not null default current_timestamp(),
+    update_at timestamp not null default current_timestamp(),
+    foreign key(user_id) 
+		references users(id)
+    on delete cascade
+    on update cascade,
+    foreign key(medicine_id) 
+		references medicine(id)
+    on delete cascade
+    on update cascade
+);
+
+
+create table delivery_person(
+	id int(8) primary key,
+    user_id int(11) not null,
+    works int(8) not null,
+    salary decimal(7,2) not null,
+	created_at timestamp not null default current_timestamp(),
+    update_at timestamp not null default current_timestamp(),
+    foreign key(user_id) 
+		references users(id)
+    on delete cascade
+    on update cascade,
+    foreign key(works) 
+		references address(id)
+    on delete cascade
+    on update cascade
+);
+
+
+create table doc(
+	id int(8) primary key,
+    full_name varchar(45) not null,
+    sepecialist varchar(45) not null,
+    degree varchar(60) not null,
+    chamber int(8) default null,
+    hospital varchar(45) default null,
+    index(full_name),
+    created_at timestamp not null default current_timestamp(),
+    update_at timestamp not null default current_timestamp(),
+    foreign key(chamber) 
+		references address(id)
+    on delete cascade
+    on update cascade
+);
+
+
+create table make_appointment(
+	id int(9) primary key,
+    doc_id int(8) not null,
+    phone char(11) not null,
+    created_at timestamp not null default current_timestamp(),
+    update_at timestamp not null default current_timestamp(),
+    foreign key(doc_id) 
+		references doc(id)
+    on delete cascade
+    on update cascade
+);
+
+drop table doc;
+drop table make_appointment;
+
+
+
