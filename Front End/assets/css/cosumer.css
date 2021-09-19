@@ -30,17 +30,114 @@ body{
 .inputs{
     top: 80px;
     position: absolute;
-    width: 280px;
+    width: 400px;
     transition: .5s;
 }
+
+#fname{
+    line-height: 20px;
+    width: 180px; 
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 45px;
+}
+
+#lname{
+    line-height: 20px;
+    width: 180px; 
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 45px;
+}
+
+#eml{
+    line-height: 20px;
+    width: 180px; 
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 80px;
+    text-align: center;
+    
+}
+
+#nmbr{
+    line-height: 20px;
+    width: 180px; 
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 15px;
+}
+
+#addr{
+    line-height: 20px;
+    width: 250px; 
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 60px;
+}
+
+.pdw{
+    line-height: 20px;
+    width: 180px; 
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.dp{
+    line-height: 20px;
+    width: 180px; 
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 45px;
+}
+
+.pd{
+    line-height: 20px;
+    width: 180px; 
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.pdw{
+    line-height: 20px;
+    width: 180px; 
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 10px;
+}
+
 
 #user{
     left: 50px;
 }
 #purchase{
-    left: 450px;
+    left: 500px;
 }
 #settings{
-    left: 850px
+    left: 900px
 }
 
+td{
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}

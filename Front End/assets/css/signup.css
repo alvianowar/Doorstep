@@ -1,7 +1,35 @@
 .navbar{
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 15px;
+}
+#b{
+    text-decoration: none;
+    color: #555;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nr{
     width: 500px;
     background-color: rgba(243, 119, 24, 0.5);
-    margin-top: 10%;
+    margin-top: 5%;
     color: #000000;
     padding: 10px 0px 10px 0px;
     text-align: center;
@@ -23,7 +51,7 @@ form{
     font-size: 20px;
     background-color: rgba(243, 119, 24, 0.5);
     width: 500px;
-    height: 300px;
+    height: 360px;
     border-radius:  0px 0px 15px 15px;
     margin-right: 900px;
 }
@@ -71,14 +99,32 @@ form{
     border-radius: 6px;
     font-size: 16px;
     margin-bottom: 10px;
-    margin-left: 40px;
+    margin-left: 38px;
 }
-
-.addr{
+.subrb{
     line-height: 20px;
     width: 260px; 
     border-radius: 6px;
     font-size: 16px;
-    margin-bottom: 10px;
-    margin-left: 90px;
+    margin-left: 92px;
+}
+
+.ara{
+    margin-top: 10px;
+    line-height: 20px;
+    width: 210px; 
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.city{
+    line-height: 20px;
+    width: 210px; 
+    border-radius: 6px;
+    font-size: 16px;
+    align-self: center;
+}
+
+.btn{
+    margin-top: 10px;
 }
