@@ -130,6 +130,9 @@ create table medicine(
     on update cascade
 );
 
+insert into medicine(id, drug_id, shop_id)
+values (1,1,3),
+	   (2,2,3);
 
 create table cart(
 	id int(10) primary key,
@@ -148,6 +151,11 @@ create table cart(
     on update cascade
 );
 
+insert into cart (id, user_id, medicine_id)
+values (1,9,1),
+	   (2,9,2),
+       (3,8,1),
+       (4,8,2);
 
 create table delivery_person(
 	id int(8) primary key,
@@ -168,7 +176,7 @@ create table delivery_person(
 
 
 create table doc(
-	id int(8) primary key,
+	id int(8) primary key auto_increment,
     full_name varchar(45) not null,
     sepecialist varchar(45) not null,
     degree varchar(60) not null,
@@ -182,10 +190,11 @@ create table doc(
     on delete cascade
     on update cascade
 );
-
+insert into doc(id, full_name, sepecialist, degree, chamber, hospital)
+value (1, "Dr. Dormamu", "Dark Energy", "No idea, Does Evil needs a degree to be a specialist", "2", "The Universe");
 
 create table make_appointment(
-	id int(9) primary key,
+	id int(9) primary key auto_increment,
     doc_id int(8) not null,
     phone char(11) not null,
     created_at timestamp not null default current_timestamp(),
@@ -196,8 +205,30 @@ create table make_appointment(
     on update cascade
 );
 
+insert into  make_appointment(id, doc_id, phone)
+value (1, 1, 01323423445),
+	  (2,1, 234342422424);
+      
 drop table doc;
 drop table make_appointment;
 
+create table purchase_history(
+	id int(9) primary key auto_increment,
+    medicine_id int(10),
+    users_id int (11),
+    quantity tinyint,
+    totalamount decimal(8,2),
+    index(users_id),
+    created_at timestamp not null default current_timestamp()
+);
 
-
+DELIMITER $$
+create trigger purchase_hisotry
+before delete 
+on cart
+for each row 
+begin
+	insert into purchase_histoy(medicine_id, users_id)
+    values(old.medicine_id, old.user_id);
+end$$
+DELIMITER ;
