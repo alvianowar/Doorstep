@@ -7,6 +7,7 @@
     <title>shop</title>
     <link rel="stylesheet" href="../assets/css/shop.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    
 </head>
 <body>
     <header>
@@ -17,14 +18,12 @@
     
             <nav>
                 <ul>
-                    <li><a href="Medicine.html">Medicine</a></li>
-                    <li><a href="doctors.html">Doctor</a></li>
-                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="meds.php">Medicine</a></li>
+                    <li><a href="doc.php">Doctor</a></li>
+                    <li><a href="store.php">Shop</a></li>
                     <li><a href="regMED.html">Add Drug</a></li>
                     <li><a href="login.html">Account</a></li>
-                    <li><a href="consumer.html">Profile</a></li>
                 </ul>
-                <a href="cart.html"><img src="/assets/img/addToCart.png" height="20px" width="20px" alt=""></a>
             </nav>
         </div>
     </header>
@@ -58,19 +57,19 @@
 
         <hr>
         
-        <select name="area" id="">
-            <option value="NULL">Area</option>
-            <option value="DHk">Dhaka</option>
-            <option value="ctg">Chittagong</option>
-            <option value="NK">NOakhali</option>
-        </select>
-        
-        <select name="city" id="">
-            <option value="NULL">City</option>
-            <option value="BR">Bashhundhara Residential</option>
-            <option value="Mohammadpur">Mohammadpur</option>
-            <option value="DhakaUddan">Dhaka Uddan</option>
-        </select>
+        <form action="../assets/php/shop.php">
+            <select name="area" id="area">
+                <option value="" selected = "selected">Area</option>
+            </select>
+            
+            <select name="city" id="city">
+                <option value="" selected = "selected">City</option>
+            </select>
+            <select name="Shop List " id="shoplist">
+                <option value="" selected = "selected">Shops</option>
+            </select><br>
+            <input type="submit" name="" value="submit">
+        </form>
         
         <div class="medicine">
             <div class="line">
@@ -95,9 +94,6 @@
             </div>
         </div>
     </main>
-    <footer>
-
-    </footer>
     
 </body>
 </html>
